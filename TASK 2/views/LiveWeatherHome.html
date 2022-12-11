@@ -6,25 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AirMass.</title>
     <link rel="stylesheet" href="../static/AirMass.css">
-    <script src="../static/AirMass.js"></script>
+    <script defer src="../static/AirMass.js"></script>
 </head>
 <body class="page">
     <div class="container">
         <div class="top">
-            <nav class="navbar">
-                <a href="../views/AirMass.html"><img src="../static/AirMass logo.png" alt="" style="width:25vw;height:4vw;"></a>
-                <a href="../views/LiveWeatherHome.html"><img src="../static/liveWeather.png" alt="" style="width:20vw;height:3vw;"></a>
-                <a href="../views/FlightPlanHome.html" class="navLink"> Flight Plan</a>
+            <nav class="nav">
+                <a href="../views/AirMass.html"><img src="../static/AirMass logo.png" alt="" style="width:25vw;height:4vw;"></a>  
+                <ul>
+                        <li class="navLink"><a href="../views/AirMass.html" > Home</a></li>
+                        <li class="navLink"><a href="../views/LiveWeatherHome.html" > Live Weather</a></li>
+                </ul>
             </nav>
         </div>
         <div class="content">
-            <form action="search" method="get">
+            <form action="search" method="post">
                 <div class="search__container">
                     <p class="search__title">
                         Search For Live Weather Data Here:
                     </p>
-                    <input class="search__input" type="text" placeholder="Search" aria-setsize="100">
+                    <input class="search__input" type="text" placeholder="Search" aria-setsize="100" required> 
                 </div>
+                <input type="submit" class="submitButton" id="submit" required>
             </form>
         </div>
 </body>

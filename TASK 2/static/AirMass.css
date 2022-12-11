@@ -1,4 +1,4 @@
-*{ /*universal selector*/
+*{ /*universal selector*/ 
     padding: 0;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -8,28 +8,59 @@
 :root{
     --transWhite:#ffffffaf;
 }
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
 .HomePage{
     background-image:url(../static/HomeBackground.jpg);
-    background-repeat: no-repeat;
     background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+     overflow-x: hidden;
+     overflow-y: hidden;
     
 }
 .page{
     background-image:url(../static/PageBackground.jpg);
     background-repeat: no-repeat;
     background-size:cover;
+    overflow-x: hidden;
+     overflow-y: hidden;
     
+}
+
+
+ul {
+    display: inline;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.active{
+    background-color:whitesmoke;
+    border-radius: 5px;
 }
 .container{
     display: grid;
     grid-template-areas: 'top' 'content';
 }
 
-.navbar{
-    grid-area: top; 
+.nav{
+    grid-area:nav; 
     background-color:var(--transWhite) ;
     height: 5vw;
-    padding: 2vw;
+    padding: 1vw;
     margin: 0;
 }
 
@@ -38,24 +69,60 @@
     padding: 1vw;
     grid-area: content;
     width:100vw;
-    font-size: 1vw;
+    font-size: 20px;
+}
+
+.HomeContent{
+    margin: 2vw;
+    padding: 1vw;
+    grid-area: content;
+    width:100vw;
+    font-size: 70px;
 }
 
 
 
+.submitButton {
+    background-color: transparent;
+    border: 7px solid black;
+    border-radius: 25px;
+    box-sizing: border-box;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 400px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
+    font-size: 20px;
+  
+    
+  }
+  
+  .submitButton:hover {
+    color: white;
+    background-color: black;
+    transform: translateY(-2px);
+  }
+  
+  .submitButton:active {
+    transform: translateY(0);
+  }
 .HomeButton {
   background-color: transparent;
-  border: 10px solid black;
+  border: 7px solid black;
   border-radius: 25px;
   box-sizing: border-box;
   color: black;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 1vw;
-  margin: 2vw;
-  margin-top: 4vw;
-  padding: 16px 24px;
-  width: 25vw;
-  height: 3vw;
+  width: 1000px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vw;
+  font-size: 60px;
 
   
 }
@@ -72,12 +139,12 @@
 
 .navLink{
   color: black;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: sy/stem-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 2vw;
   margin: 5vw;
   padding: 5vw;
-  width: 25vw;
-  height: 3vw;
+  width: 24px;
+  height: 12px;
   text-align: center;
   text-decoration: none;
 }
@@ -89,9 +156,9 @@
 .search__container {
         padding: 2vw;
         margin: 2vw;
-        position:fixed;
+        position:absolute;
         top: 15vw;
-        left: 15vw;
+        left: 10vw;
     }
     
 .search__title {
@@ -104,47 +171,116 @@
 .search__input {
         width: 100%;
         padding: 12px 24px;
-        background-color: transparent;
+        background-color: gainsboro;
         transition: transform 250ms ease-in-out;
         font-size: 14px;
         line-height: 18px;
         color: #575756;
-        background-color: transparent;
     }
 
     .search__Depart {
         padding: 2vw;
         margin: 2vw;
-        position:fixed;
+        position:absolute;
         top: 15vw;
-        left: 15vw;
+        left: 10vw;
     
     }
 
     .search__Arrival {
         padding: 2vw;
         margin: 2vw;
-        position:fixed;
+        position:absolute;
         top: 15vw;
         left: 50vw;
     
     }
-    .A_DT{
-        padding: 2vw;
-        margin: 2vw;
-        position:fixed;
-        top: 25vw;
-        left: 50vw;
-    }
-    .D_DT{
-        padding: 2vw;
-        margin: 2vw;
-        position:fixed;
-        top: 25vw;
-        left: 15vw;
-    }
+
+    
     #submit{
-        position:fixed;
-        top: 30vw;
-        left: 35vw;
+        position:absolute;
+        top: 19.5vw;
+        left: 45vw;
+        margin: 1vw;
     }
+
+
+    .night {
+        background: url(../static/sunsetAirport.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        
+     }
+
+
+     .content h1 {
+        color: black;
+        overflow: hidden; 
+        border-right: .15em solid black;
+        white-space: nowrap;
+        margin: 0 auto; 
+        letter-spacing: .15em; 
+        animation: 
+          typing 3.5s steps(30, end),
+          blink-caret .5s step-end infinite;
+      }
+
+    .DataHead{
+      
+        font-size: 2vw;
+    }
+      
+    
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      
+
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: black }
+      }
+
+
+   
+
+
+      
+@media only screen and (max-width: 1500px) {
+    
+
+    #submit{
+        position:absolute;
+        top: 40vw;
+        left: 10vw;
+        margin: 0px;
+    }
+
+    .HomeButton {
+        background-color: transparent;
+        border: 7px solid black;
+        border-radius: 25px;
+        box-sizing: border-box;
+        color: black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        width: 400px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+      
+    .search__container {
+         padding: 0vw;
+         margin: 0vw;
+         position:absolute;
+         top: 15vw;
+         left: 10vw;
+    }
+    
+    
+
+} 
