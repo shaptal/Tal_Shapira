@@ -1,0 +1,14 @@
+modules:
+
+- express
+- hbs
+- path
+
+install those by typing "npm i" as stated in the README.
+
+I used .hbs files instead of .html files for convenience.
+
+No additional code is needed in order to run or create the project or database.
+
+More instructions on how to run the project in the README file.
+
