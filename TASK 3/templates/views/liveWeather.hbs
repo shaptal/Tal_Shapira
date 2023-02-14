@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
+</head>
+<body class="page">
+    <div class="container">
+        <div class="top">
+            <nav class="nav">
+                <a href="homePage"><img src="css/AirMass logo.png" alt="" style="width:25vw;height:4vw;"></a>  
+                <ul>
+                        <li class="navLink"><a href="homePage" > Home</a></li>
+                        <li class="navLink"><a href="liveWeather" > Live Weather</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <form action="/search" method="post">
+                <div class="search__container">
+                    <p class="search__title">
+                        Search For Live Weather Data Here:
+                    </p>
+                    <input class="search__input" type="text" placeholder="Enter City Name" aria-setsize="100" required> 
+                    <div class="date"></div>
+                </div>
+                <input type="submit" class="submitButton" id="submit" required>
+            </form>
+        </div>
+        <div class="weatherContent">
+            <h1> Search Results:</h1>
+         <span></span>
+            <div class="weatherInfo">
+                <div class="temprature"><span></span></div>
+                <div class="description">
+                    <div class="weatherCondition"></div>
+                    <div class="place"></div><br>
+                    <h1> Weather Warnings:</h1>
+                    <div class="warning"></div>
+                </div>
+            </div>
+         </span>
+         </div>    
+    </div>
+    
+</body>
+</html>
