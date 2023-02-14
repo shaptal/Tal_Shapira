@@ -1,8 +1,7 @@
-*{ /*universal selector*/ 
+*{
     padding: 0;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   
 }
 
 :root{
@@ -10,27 +9,24 @@
 }
 
 body, html{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
+
 .HomePage{
     background-image:url(../css/HomeBackground.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center center;
-     overflow-x: hidden;
-     overflow-y: hidden;
-    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
+
 .page{
     background-image:url(../css/PageBackground.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center center;
-     overflow-x: hidden;
-     overflow-y: hidden;
-    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
+
 
 
 ul {
@@ -52,10 +48,13 @@ a {
     background-color:whitesmoke;
     border-radius: 5px;
 }
+
 .container{
     display: grid;
-    grid-template-areas: 'top' 'content' 'weaherContent';
+    grid-template-areas: 
+        'top' 'content' 'weatherContent';
 }
+
 
 .nav{
     grid-area:nav; 
@@ -65,11 +64,25 @@ a {
     margin: 0;
 }
 
+.weatherContent {
+    margin: 2vw;
+    padding: 1vw;
+    grid-area: weatherContent;
+    font-size: 15px;
+    background-color: aliceblue;
+    margin-top: 18vw;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .content{
     margin: 2vw;
     padding: 1vw;
     grid-area: content;
-    width:100vw;
+    width: 60vw;
     font-size: 20px;
 }
 
@@ -250,14 +263,24 @@ a {
       
 @media only screen and (max-width: 1500px) {
     
+    .container{
+        display: grid;
+        grid-template-areas: 
+            'top top' 'content weatherContent';
+        grid-template-columns: 1fr 40vw;
+    }
 
+    .top{
+        width: 200%;
+    }
+    
     #submit{
         position:absolute;
         top: 40vw;
         left: 10vw;
         margin: 0px;
     }
-
+    
     .HomeButton {
         background-color: transparent;
         border: 7px solid black;
@@ -281,17 +304,41 @@ a {
          top: 15vw;
          left: 10vw;
     }
-} 
-
-.weatherContent{
-    display: block;
-    align-items: center;
-    justify-content: center;  
-    margin-top: 20vw;
-    background-color: aliceblue;
-    text-align: center;
-    height: 15vw;
+    
+    .weatherContent{
+        height: 100%;
+        width: 40vw;
+        margin-top: 12vw;
+    }
 }
+
+@media only screen and (max-width: 750px) {
+    
+    .container{
+        display: grid;
+        grid-template-areas: 
+            'top' 'content' 'weatherContent';
+    }
+    .weatherContent {
+        margin: 2vw;
+        margin-top: 50vw;
+        padding: 1vw;
+        grid-area: weatherContent;
+        font-size: 15px;
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50vh;
+        width: 100vw;
+      }
+
+    
+
+}
+
+
 .warning{
     color: red;
     font-size: 20px;
