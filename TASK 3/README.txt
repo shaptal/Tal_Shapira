@@ -49,6 +49,7 @@ Website's functionalities:
 - if the input is not found there will be an alternative text
 - "loading..." will be shown while data is loaded.
 - search time and date will be displayed under the searchbox at all time.
+- beteeen 18:00 and 06:00 localtime the background image will change to a more evening appropriate image. 
 - weather warnings:
     1. will be displayed under several weather conditions.
     2. its possible to have multiple warnings at the same time.
